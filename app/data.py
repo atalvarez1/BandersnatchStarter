@@ -6,7 +6,7 @@ from MonsterLab import Monster
 from pandas import DataFrame
 from pymongo import MongoClient
 
-
+#test
 class Database:
 
     def seed(self, amount):
