@@ -46,8 +46,8 @@ class Database:
         """
         documents = self.collection.find(())
         df = DataFrame(documents)
-        new_df = df.drop('_id', axis=1)
-        return new_df
+        df = df.drop('_id', axis=1)
+        return df
 
     def html_table(self) -> str:
         """
@@ -55,5 +55,5 @@ class Database:
         or None if the collection is empty
         """
         if self.count() == 0:
-            return None
+            return "None"
         return self.dataframe().to_html()
